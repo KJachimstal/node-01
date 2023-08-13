@@ -1,11 +1,10 @@
-// TODO: udokumentuj każdą funkcje
-
 const path = require("path");
 const fs = require("fs");
 
 // * Declare file path
 const contactsPath = path.normalize("./db/contacts.json");
 
+// * Get all contacts from file
 const getContacts = () => {
   return new Promise(function (resolve, reject) {
     fs.readFile(contactsPath, "utf8", (err, data) => {
@@ -17,6 +16,7 @@ const getContacts = () => {
   });
 };
 
+// * Get contact by ID
 const getContactById = (contactId) => {
   return new Promise(function (resolve, reject) {
     fs.readFile(contactsPath, "utf8", (err, data) => {
@@ -34,6 +34,7 @@ const getContactById = (contactId) => {
   });
 };
 
+// * Remove contact by ID
 const removeContact = (contactId) => {
   return new Promise(function (resolve, reject) {
     fs.readFile(contactsPath, "utf8", (err, data) => {
@@ -48,12 +49,14 @@ const removeContact = (contactId) => {
         if (err) console.log(err);
       });
       console.log("Contact has been deleted!");
+      console.table(data);
     } else {
       console.log("Contact not found! Unable to delete!");
     }
   });
 };
 
+// * Add new contact to contacts
 const addContact = (name, email, phone) => {
   return new Promise(function (resolve, reject) {
     fs.readFile(contactsPath, "utf8", (err, data) => {
@@ -72,6 +75,7 @@ const addContact = (name, email, phone) => {
       if (err) console.log(err);
     });
     console.log("Contact has been added!");
+    console.table(data);
   });
 };
 
