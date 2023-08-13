@@ -13,7 +13,7 @@ const getContacts = () => {
       return resolve(JSON.parse(data));
     });
   }).then((data) => {
-    console.log(data);
+    console.table(data);
   });
 };
 

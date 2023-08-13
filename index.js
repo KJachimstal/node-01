@@ -9,10 +9,10 @@ const {
   addContact,
 } = require("./contacts");
 
-// getContacts();
+getContacts();
 
 // getContactById("C9sjBfCo4UJCWjzBnOtxl");
 
 // removeContact("C9sjBfCo4UJCWjzBnOtxl");
 
-addContact("Jan Kowalski", "kowal@kowal.pl", "657-032-312");
+// addContact("Jan Kowalski", "kowal@kowal.pl", "657-032-312");
