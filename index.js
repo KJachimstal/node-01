@@ -9,11 +9,10 @@ const {
   addContact,
 } = require("./contacts");
 
-// * Checking file can be read and write
-// fs.access(contactsPath, fs.constants.R_OK | fs.constants.W_OK, (err) => {
-//   console.log("\n> Checking Permission for reading and writing the file");
-//   if (err) console.error("No Read access");
-//   else console.log("File can be read and write");
-// });
+// getContacts();
 
-getContacts();
+// getContactById("C9sjBfCo4UJCWjzBnOtxl");
+
+// removeContact("C9sjBfCo4UJCWjzBnOtxl");
+
+addContact("Jan Kowalski", "kowal@kowal.pl", "657-032-312");
